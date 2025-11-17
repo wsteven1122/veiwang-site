@@ -1,0 +1,848 @@
+/*================================
+  基本設定 (Base & Reset)
+================================*/
+:root {
+  --veiwang-red: #c0392b; /* 味王主色：深紅色 */
+  --veiwang-red-light: #e74c3c; /* 稍亮的紅色 */
+  --veiwang-yellow: #f39c12; /* 點綴色：黃/橘色 */
+  --text-color: #ffffff;
+  --text-light-grey: #848484;
+  --bg-light: #f4f4f4;
+  --bg-white: #ffffff;
+  --border-grey: #ddd;
+  --shadow-light: 0 2px 8px rgba(0, 0, 0, 0.05);
+  --shadow-medium: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans TC", "Roboto", sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--bg-white);
+  scroll-behavior: smooth; /* 平滑滾動 */
+}
+
+.container {
+  width: 90%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 1.8em;
+  font-weight: 700;
+  margin-bottom: 30px;
+  padding-top: 50px;
+  text-align: center;
+  letter-spacing: 2px;
+  color: #ecf0f1;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+/*================================
+  變數與基本設定 (Variables & Base)
+================================*/
+:root {
+  --veiwang-red: #c0392b;
+  --veiwang-red-light: #e74c3c;
+  --text-color: #333;
+  --bg-white: #ffffff;
+  --border-grey: #ddd;
+  --shadow-light: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans TC", "Roboto", sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--bg-white);
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 90%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+h3 {
+  font-size: 1.8em;
+  font-weight: 700;
+  margin-bottom: 30px;
+  padding-top: 50px;
+  text-align: center;
+  letter-spacing: 2px;
+  color: var(--text-color);
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+/*================================
+  導航列 (Header & Nav) - 最終整合
+================================*/
+.sticky-header {
+  background-color: var(--bg-white);
+  box-shadow: var(--shadow-light);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+/* Logo 容器與圖片 (高度 80px) */
+.logo a {
+  display: flex;
+  align-items: center;
+  height: 80px;
+}
+
+.team-logo-img {
+  max-height: auto;
+  width: 300px;
+  object-fit: contain;
+}
+
+/* 主要導航選單 */
+.main-nav {
+  flex-grow: 1; /* 讓選單佔據中間剩餘空間 */
+  margin-left: 30px;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+}
+
+.nav-link {
+  padding: 10px 18px;
+  font-weight: 500;
+  font-size: 1.05em;
+  color: #555;
+  white-space: nowrap;
+  border-bottom: 3px solid transparent;
+}
+
+.nav-link:hover {
+  color: var(--veiwang-red);
+  border-bottom: 3px solid var(--veiwang-red);
+}
+
+/* 右側動作區塊 */
+.header-actions-block {
+  display: flex;
+  align-items: center;
+  height: 80px; /* 確保與 Logo 高度一致 */
+}
+
+/* 語言切換和搜尋圖標 (如果不需要紅色模塊內的，可以保留) */
+.btn-search-icon,
+.btn-lang-toggle {
+  display: none; /* 暫時隱藏，因為被紅色模塊取代 */
+}
+/* 如果您仍需要保留 English 按鈕，請取消註釋以下程式碼 */
+/*
+.btn-lang-toggle {
+    display: block;
+    font-size: 0.9em;
+    color: #555;
+    padding: 5px 10px;
+    margin-right: 15px;
+    border: 1px solid var(--border-grey);
+    border-radius: 4px;
+}
+*/
+
+/* 🎯 關鍵：右側紅色行動模塊 (Red Action Module) */
+.red-action-module {
+  display: flex;
+  height: 80px; /* 與 Header 高度一致 */
+}
+
+.red-module-link {
+  background-color: var(--veiwang-red-light);
+  color: white;
+  text-align: center;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.2s;
+  font-size: 0.95em;
+  white-space: nowrap;
+  border-left: 1px solid rgba(255, 255, 255, 0.2); /* 分隔線 */
+}
+
+.red-module-link:hover {
+  background-color: var(--veiwang-red);
+}
+
+.red-module-link .icon {
+  font-size: 1.2em;
+  margin-bottom: 3px;
+}
+.red-module-link .text {
+  font-weight: 700;
+}
+
+/*================================
+  主視覺區 (Hero Section) - 使用王子麵圖片
+================================*/
+.hero-section {
+  /* 🎯 替換為您的王子麵圖片路徑 (影像 9.jpeg) */
+  background: url("影像 9.jpeg") center/cover no-repeat;
+  height: 480px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+/* ... (Hero 遮罩與文字保持不變) ... */
+/*================================
+  日清風格頂部連結卡片 (Top Link Cards)
+================================*/
+.top-link-cards-section {
+  padding: 40px 0;
+  background-color: var(--bg-white);
+}
+
+.top-link-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 15px; /* 卡片間距 */
+}
+
+.big-card {
+  height: 120px; /* 卡片高度 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px; /* 圓角 */
+  color: var(--text-color);
+  font-weight: 700;
+  font-size: 1.1em;
+  text-align: center;
+  box-shadow: var(--shadow-light);
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+  overflow: hidden; /* 防止內容溢出圓角 */
+}
+
+.big-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-medium);
+}
+
+/* 各卡片背景樣式 */
+.ir-summary-report {
+  background-color: #e0e0e0; /* 淺灰色 */
+}
+.value-report {
+  background-color: var(--veiwang-red); /* 紅色 */
+  color: white;
+}
+.ceo-message {
+  background: url("ceo-message-bg.jpg") center/cover no-repeat; /* CEO 圖片 */
+  color: white;
+}
+.investor-guide {
+  background: url("investor-guide-bg.jpg") center/cover no-repeat; /* 投資人指南圖片 */
+  color: white;
+}
+
+/* 確保文字在圖片背景卡片上清晰可見 */
+.ceo-message::before,
+.investor-guide::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* 遮罩 */
+  z-index: 0;
+}
+.big-card .card-text {
+  position: relative;
+  z-index: 1;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* 文字陰影 */
+}
+
+/* ... (所有現有的 CSS 規則保持不變，特別是 Header 和 Nav 的規則) ... */
+
+/*================================
+  主視覺區 (Hero Section) - 輪播結構
+================================*/
+.hero-section {
+  /* 移除背景圖設定，改由輪播容器處理 */
+  background: none;
+  height: 480px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden; /* 確保圖片輪播不會溢出 */
+}
+
+/* 輪播圖容器 */
+.carousel-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  /* CSS 模擬淡入淡出，未來配合 JS */
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.carousel-item.active {
+  opacity: 1; /* 只有 active 的圖片才顯示 */
+}
+
+/* 文字疊圖層 */
+.hero-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* 增加遮罩以確保文字清晰 */
+  z-index: 2; /* 位於圖片和文字之間 */
+}
+
+.hero-text {
+  position: relative;
+  z-index: 3; /* 確保文字在最上層 */
+  /* ... (其他 Hero Text 樣式保持不變) ... */
+}
+
+/* 輪播導航點 */
+.carousel-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  gap: 8px;
+}
+
+/*================================
+  主視覺區 (Hero Section) - 輪播結構微調
+================================*/
+/* 輪播導航點微調 */
+.dot {
+  width: 12px; /* 稍微增大 */
+  height: 12px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border: 1px solid white;
+}
+
+.dot.active {
+  background-color: var(--veiwang-red);
+  border: 2px solid white;
+}
+
+/*================================
+  頁腳 (Footer) - 劃分為淺色區和深色區
+================================*/
+footer {
+  background-color: #f8f8f8; /* 淺色背景 */
+  font-size: 0.9em;
+  border-top: 1px solid #eee;
+}
+
+/* 淺色區 */
+.footer-top {
+  padding: 20px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.footer-top .footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.footer-top a {
+  color: var(--text-light-grey);
+  transition: color 0.3s;
+}
+
+.footer-top a:hover {
+  color: var(--veiwang-red);
+}
+
+/* 🎯 深色區塊 (Footer Bottom) */
+.footer-bottom {
+  background-color: #333333; /* 黑色/深灰色背景 */
+  color: #cccccc;
+  padding: 15px 0;
+}
+
+.footer-bottom .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyright {
+  margin: 0;
+}
+
+.legal-links a {
+  color: #cccccc;
+  margin-left: 20px;
+  transition: color 0.3s;
+}
+
+.legal-links a:hover {
+  color: var(--veiwang-yellow);
+}
+
+/*================================
+  新聞區塊 (News & Events)
+================================*/
+.news-events-section {
+  padding: 50px 0 30px 0;
+  background-color: var(--bg-white);
+}
+
+.news-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border-top: 1px solid var(--border-grey);
+  padding-top: 20px;
+  margin-bottom: 25px;
+}
+
+.news-item {
+  display: flex;
+  padding: 12px 0;
+  border-bottom: 1px dotted #eee;
+}
+
+.news-item:last-child {
+  border-bottom: none;
+}
+
+.news-date {
+  font-weight: 700;
+  color: var(--veiwang-red);
+  margin-right: 30px;
+  min-width: 100px;
+}
+
+.news-item a {
+  color: var(--text-color);
+  transition: color 0.3s;
+}
+
+.news-item a:hover {
+  color: var(--veiwang-red);
+  text-decoration: underline;
+}
+
+.view-all-button {
+  display: block;
+  width: 250px;
+  margin: 30px auto 0 auto;
+  text-align: center;
+  padding: 10px;
+  border: 2px solid var(--veiwang-red);
+  color: var(--veiwang-red);
+  font-weight: 700;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 5px;
+}
+
+.view-all-button:hover {
+  background-color: var(--veiwang-red);
+  color: white;
+}
+
+/*================================
+  核心價值區塊 (Card Layout)
+================================*/
+.value-section {
+  background-color: var(--bg-light);
+  padding: 50px 0;
+}
+
+.value-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 20px 0 50px 0;
+}
+
+.card {
+  background-color: var(--bg-white);
+  padding: 30px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: var(--shadow-light);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-medium);
+}
+
+.icon {
+  font-size: 3em;
+  margin-bottom: 15px;
+  color: var(--veiwang-red); /* 圖標顏色 */
+}
+
+.card h4 {
+  font-size: 1.5em;
+  color: var(--veiwang-red);
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: var(--text-light-grey);
+}
+
+/*================================
+  投資人關係 (IR) 專區 - 股價圖表實作
+================================*/
+.ir-section {
+  padding-bottom: 50px;
+  background-color: var(--bg-light);
+}
+
+.ir-section h3 {
+  padding-top: 30px;
+}
+
+.ir-grid-container {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.ir-reports-schedule {
+  flex: 2;
+  background-color: var(--bg-white);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: var(--shadow-light);
+}
+
+.ir-reports-schedule h4 {
+  font-size: 1.25em;
+  color: var(--veiwang-red);
+  margin-bottom: 15px;
+  border-left: 4px solid var(--veiwang-yellow);
+  padding-left: 10px;
+}
+
+.report-list {
+  list-style: none;
+  margin-bottom: 30px;
+}
+
+.report-list li {
+  padding: 8px 0;
+  border-bottom: 1px dotted #eee;
+}
+
+.report-list li a {
+  color: #007bff;
+  margin-left: 10px;
+  transition: color 0.2s;
+}
+
+.report-list li a:hover {
+  color: var(--veiwang-red);
+}
+
+.report-icon {
+  font-size: 1.1em;
+  color: var(--veiwang-red);
+}
+
+.schedule-title {
+  margin-top: 20px !important;
+}
+
+.schedule-info {
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid var(--border-grey);
+  font-weight: 700;
+}
+
+/* 股價資訊區塊 */
+.stock-info-box {
+  flex: 1;
+  background-color: var(--bg-white);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: var(--shadow-light);
+  text-align: center;
+}
+
+.stock-price {
+  margin: 15px 0;
+}
+
+.current-price {
+  font-size: 2em;
+  font-weight: 700;
+  color: var(--veiwang-red);
+}
+
+.change {
+  color: green; /* 假設上漲 */
+  font-weight: 700;
+  margin-top: 5px;
+}
+
+/* 股價圖表顯示 */
+.stock-chart-display {
+  height: 150px; /* 圖表高度 */
+  margin: 15px 0;
+  border: 1px solid var(--border-grey);
+  display: flex; /* 讓圖片置中 */
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* 防止圖片溢出 */
+}
+
+.stock-chart-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* 確保圖片不變形 */
+}
+
+.view-stock-detail {
+  display: block;
+  margin-top: 10px;
+  color: #007bff;
+  font-weight: 700;
+}
+
+/* IR 快速連結卡片 (模擬日清的彩色圖標區) */
+.ir-quick-links {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.ir-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  border-radius: 8px;
+  color: white;
+  font-weight: 700;
+  font-size: 1.1em;
+  transition: opacity 0.3s;
+  box-shadow: var(--shadow-light);
+}
+
+.ir-card:hover {
+  opacity: 0.9;
+}
+
+.ir-card .icon {
+  font-size: 2.5em;
+  margin-bottom: 5px;
+  color: white; /* 確保圖標在彩色背景上是白色 */
+}
+
+/* 顏色設定 (模擬日清的區塊色) */
+.ir-card.purple {
+  background-color: #8e44ad;
+}
+.ir-card.navy {
+  background-color: #2c3e50;
+}
+.ir-card.green {
+  background-color: #27ae60;
+}
+.ir-card.orange {
+  background-color: #e67e22;
+}
+
+/*================================
+  企業群組/事業體 (Business Units)
+================================*/
+.business-section {
+  padding-bottom: 70px;
+}
+
+.business-section h4 {
+  font-size: 1.4em;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  padding-left: 10px;
+  border-left: 5px solid var(--veiwang-red);
+}
+
+/* 國內事業公司 Grid */
+.group-logos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+  text-align: center;
+}
+
+.group-logo-item {
+  display: block;
+  padding: 15px;
+  background-color: var(--bg-white);
+  border-radius: 8px;
+  box-shadow: var(--shadow-light);
+  transition: box-shadow 0.2s;
+}
+
+.group-logo-item:hover {
+  box-shadow: var(--shadow-medium);
+}
+
+.group-logo-item img {
+  width: 80%;
+  height: auto;
+  max-height: 60px;
+  margin-bottom: 5px;
+  object-fit: contain;
+}
+
+.group-logo-item p {
+  font-size: 0.9em;
+  color: var(--text-light-grey);
+}
+
+.group-logo-item.other {
+  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* 海外事業地域 Card */
+.overseas-title {
+  margin-top: 60px !important;
+}
+
+.overseas-regions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.region-card {
+  display: block;
+  height: 150px;
+  background-color: #ecf0f1;
+  background-image: url("map-placeholder.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  padding: 20px;
+  transition: opacity 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.region-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.region-card:hover {
+  opacity: 0.85;
+}
+
+.region-name {
+  position: relative;
+  z-index: 2;
+  display: block;
+  font-size: 1.5;
+}
+/*================================
+  股價趨勢圖 - 模擬繪製動畫
+================================*/
+
+/* 定義動畫：模擬線條從 0 增長到 100% */
+@keyframes drawChart {
+  from {
+    clip-path: inset(0 100% 0 0); /* 裁剪路徑：從右邊完全裁剪，即寬度為 0 */
+  }
+  to {
+    clip-path: inset(0 0 0 0); /* 裁剪路徑：完全展開，寬度為 100% */
+  }
+}
+
+.stock-chart-display {
+  height: 150px;
+  margin: 15px 0;
+  border: 1px solid var(--border-grey);
+  overflow: hidden; /* 確保裁剪動畫的邊界 */
+  position: relative;
+  background-color: #f9f9f9; /* 淺色背景 */
+}
+
+/* 將動畫應用到圖表圖片上 */
+.stock-chart-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+
+  /* 應用動畫效果 */
+  animation: drawChart 2s ease-out forwards; /* 2秒內完成繪製，並保持結束狀態 */
+}
