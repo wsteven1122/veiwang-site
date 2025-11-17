@@ -1,0 +1,566 @@
+/*================================
+  基本設定 (Base & Reset)
+================================*/
+:root {
+  --veiwang-red: #c0392b; /* 味王主色：深紅色 */
+  --veiwang-yellow: #f39c12; /* 點綴色：黃/橘色 */
+  --text-color: #333;
+  --bg-light: #f4f4f4;
+  --bg-white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans TC", "Roboto", sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--bg-white);
+}
+
+.container {
+  width: 90%;
+  max-width: 1280px; /* 寬一點，更現代 */
+  margin: 0 auto;
+}
+
+h3 {
+  font-size: 1.8em;
+  font-weight: 700;
+  margin-bottom: 30px;
+  padding-top: 50px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+/*================================
+  導航列 (Header & Nav)
+================================*/
+header {
+  background-color: var(--bg-white);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.logo a {
+  font-size: 1.8em;
+  font-weight: 700;
+  color: var(--veiwang-red); /* Logo 使用品牌色 */
+  /* 實際應用中會在這裡使用 background-image 替換為 Logo */
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+}
+
+.nav-link {
+  padding: 10px 18px;
+  font-weight: 400;
+  font-size: 1.05em;
+  transition: color 0.3s, border-bottom 0.3s;
+  color: #555;
+}
+
+.nav-link:hover {
+  color: var(--veiwang-red);
+  border-bottom: 3px solid var(--veiwang-red);
+}
+
+/*================================
+  主視覺區 (Hero Section)
+================================*/
+.hero-section {
+  background: url("veiwang-hero-placeholder.jpg") center/cover no-repeat; /* 替換為高質感大圖 */
+  height: 450px;
+  position: relative;
+}
+
+.hero-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* 增加半透明遮罩來確保文字清晰 */
+  background: rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+}
+
+.hero-text {
+  color: white;
+  text-align: left;
+  max-width: 600px;
+  padding-left: 20px;
+}
+
+.hero-tagline {
+  font-size: 1.2em;
+  font-weight: 400;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.hero-title {
+  font-size: 3em;
+  font-weight: 700;
+  line-height: 1.2;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/*================================
+  新聞區塊 (News & Events)
+================================*/
+.news-events-section {
+  padding: 50px 0 30px 0;
+  background-color: var(--bg-white);
+}
+
+.news-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+  margin-bottom: 25px;
+}
+
+.news-item {
+  display: flex;
+  padding: 12px 0;
+  border-bottom: 1px dashed #eee;
+}
+
+.news-item:last-child {
+  border-bottom: none;
+}
+
+.news-date {
+  font-weight: 700;
+  color: var(--veiwang-red);
+  margin-right: 30px;
+  min-width: 100px; /* 確保日期對齊 */
+}
+
+.news-item a {
+  color: var(--text-color);
+  transition: color 0.3s;
+}
+
+.news-item a:hover {
+  color: var(--veiwang-red);
+  text-decoration: underline;
+}
+
+.view-all-button {
+  display: block;
+  width: 250px;
+  margin: 30px auto 0 auto;
+  text-align: center;
+  padding: 10px;
+  border: 2px solid var(--veiwang-red);
+  color: var(--veiwang-red);
+  font-weight: 700;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.view-all-button:hover {
+  background-color: var(--veiwang-red);
+  color: white;
+}
+
+/*================================
+  核心價值區塊 (Card Layout)
+================================*/
+.value-section {
+  background-color: var(--bg-light);
+  padding: 50px 0;
+}
+
+.value-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 20px 0 50px 0;
+}
+
+.card {
+  background-color: var(--bg-white);
+  padding: 30px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.12);
+}
+
+.icon {
+  font-size: 3em;
+  margin-bottom: 15px;
+}
+
+.card h4 {
+  font-size: 1.5em;
+  color: var(--veiwang-red);
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #666;
+}
+
+/* ... (Base Setting and Header/Hero Styles Remain) ... */
+
+/*================================
+  投資人關係 (IR) 專區
+================================*/
+.ir-section {
+  padding-bottom: 50px;
+  background-color: var(--bg-light);
+}
+
+.ir-section h3 {
+  padding-top: 30px;
+}
+
+.ir-grid-container {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.ir-reports-schedule {
+  flex: 2;
+  background-color: var(--bg-white);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.ir-reports-schedule h4 {
+  font-size: 1.25em;
+  color: var(--veiwang-red);
+  margin-bottom: 15px;
+  border-left: 4px solid var(--veiwang-yellow);
+  padding-left: 10px;
+}
+
+.report-list {
+  list-style: none;
+  margin-bottom: 30px;
+}
+
+.report-list li {
+  padding: 8px 0;
+  border-bottom: 1px dotted #eee;
+}
+
+.report-list li a {
+  color: #007bff;
+  margin-left: 10px;
+  transition: color 0.2s;
+}
+
+.report-list li a:hover {
+  color: var(--veiwang-red);
+}
+
+.report-icon {
+  font-size: 1.1em;
+  color: var(--veiwang-red);
+}
+
+.schedule-title {
+  margin-top: 20px !important;
+}
+
+.schedule-info {
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  font-weight: 700;
+}
+
+/* 股價資訊區塊 */
+.stock-info-box {
+  flex: 1;
+  background-color: var(--bg-white);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.stock-price {
+  margin: 15px 0;
+}
+
+.current-price {
+  font-size: 2em;
+  font-weight: 700;
+  color: var(--veiwang-red);
+}
+
+.change {
+  color: green; /* 假設上漲 */
+  font-weight: 700;
+  margin-top: 5px;
+}
+
+.stock-chart-placeholder {
+  height: 150px;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  margin: 15px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #999;
+  font-size: 0.9em;
+}
+
+.view-stock-detail {
+  display: block;
+  margin-top: 10px;
+  color: #007bff;
+  font-weight: 700;
+}
+
+/* IR 快速連結卡片 (模擬日清的彩色圖標區) */
+.ir-quick-links {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.ir-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  border-radius: 8px;
+  color: white;
+  font-weight: 700;
+  font-size: 1.1em;
+  transition: opacity 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.ir-card:hover {
+  opacity: 0.9;
+}
+
+.ir-card .icon {
+  font-size: 2.5em;
+  margin-bottom: 5px;
+}
+
+/* 顏色設定 (模擬日清的區塊色) */
+.ir-card.purple {
+  background-color: #8e44ad;
+}
+.ir-card.navy {
+  background-color: #2c3e50;
+}
+.ir-card.green {
+  background-color: #27ae60;
+}
+.ir-card.orange {
+  background-color: #e67e22;
+}
+
+/*================================
+  企業群組/事業體 (Business Units)
+================================*/
+.business-section {
+  padding-bottom: 70px;
+}
+
+.business-section h4 {
+  font-size: 1.4em;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  padding-left: 10px;
+  border-left: 5px solid var(--veiwang-red);
+}
+
+/* 國內事業公司 Grid */
+.group-logos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+  text-align: center;
+}
+
+.group-logo-item {
+  display: block;
+  padding: 15px;
+  background-color: var(--bg-white);
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.2s;
+}
+
+.group-logo-item:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.group-logo-item img {
+  width: 80%; /* 模擬 Logo 大小 */
+  height: auto;
+  max-height: 60px;
+  margin-bottom: 5px;
+  object-fit: contain;
+}
+
+.group-logo-item p {
+  font-size: 0.9em;
+  color: #666;
+}
+
+.group-logo-item.other {
+  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* 海外事業地域 Card */
+.overseas-title {
+  margin-top: 60px !important;
+}
+
+.overseas-regions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.region-card {
+  display: block;
+  height: 150px;
+  background-color: #ecf0f1; /* 模擬日清的藍色地球背景 */
+  background-image: url("map-placeholder.png"); /* 替換為世界地圖背景 */
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  padding: 20px;
+  transition: opacity 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.region-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); /* 輕微的遮罩 */
+  z-index: 1;
+}
+
+.region-card:hover {
+  opacity: 0.85;
+}
+
+.region-name {
+  position: relative;
+  z-index: 2;
+  display: block;
+  font-size: 1.5em;
+  font-weight: 700;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* ... (Value Section, Quick Links, Footer Styles Remain) ... */
+/*================================
+  快速連結區塊 (Quick Links)
+================================*/
+.quick-links-section {
+  display: flex;
+  gap: 20px;
+  padding: 50px 0 70px 0;
+}
+
+.link-item {
+  flex: 1;
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: var(--bg-light);
+}
+
+.link-item h4 {
+  font-size: 1.4em;
+  color: var(--veiwang-red);
+  margin-bottom: 10px;
+}
+
+.link-item p {
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.link-item a {
+  display: inline-block;
+  color: #007bff; /* 使用標準藍色作為連結色 */
+  font-weight: 700;
+  transition: color 0.3s;
+}
+
+.link-item a:hover {
+  color: var(--veiwang-red);
+}
+
+/*================================
+  頁腳 (Footer)
+================================*/
+footer {
+  background-color: #333;
+  color: white;
+  padding: 30px 0;
+  text-align: center;
+  font-size: 0.9em;
+}
+
+.footer-links a {
+  color: #ccc;
+  margin: 0 15px;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: var(--veiwang-yellow);
+}
+
+footer p {
+  margin-top: 15px;
+  color: #aaa;
+}
