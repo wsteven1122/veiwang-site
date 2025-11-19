@@ -12,44 +12,92 @@
     />
   </head>
   <body>
-    <header class="sticky-header">
-      <div class="container header-content">
-        <h1 class="logo">
-          <a href="#">
-            <img
-              src="./img/味王logo.png"
-              alt="味王股份有限公司 Logo"
-              class="team-logo-img"
-            />
-          </a>
-        </h1>
-        <nav class="main-nav">
-          <ul>
-            <li><a href="#company-info" class="nav-link">企業情報</a></li>
-            <li><a href="#products" class="nav-link">產品與服務</a></li>
-            <li><a href="#sustainability" class="nav-link">持續性發展</a></li>
-            <li><a href="#investor" class="nav-link">投資人專區</a></li>
-            <li><a href="#careers" class="nav-link">招募資訊</a></li>
-          </ul>
-        </nav>
+    <header class="tiered-header">
+      <div class="utility-bar">
+        <div class="container utility-grid">
+          <div class="utility-links">
+            <a href="#sustainability">ESG 報告</a>
+            <a href="#investor">Investor Deck</a>
+            <a href="#careers">人才招募</a>
+            <a href="#partnership">產學共創</a>
+          </div>
+          <div class="utility-status">
+            <span class="market-chip">TWSE:1203</span>
+            <span class="market-chip">Next Bank Visual DNA</span>
+          </div>
+        </div>
+      </div>
+      <div class="primary-bar">
+        <div class="container primary-flex">
+          <h1 class="logo">
+            <a href="#">
+              <img
+                src="./img/味王logo.png"
+                alt="味王股份有限公司 Logo"
+                class="team-logo-img"
+              />
+            </a>
+          </h1>
+          <nav class="primary-nav">
+            <ul>
+              <li><a href="#company-info" class="nav-link">集團縱覽</a></li>
+              <li><a href="#products" class="nav-link">味王矩陣</a></li>
+              <li><a href="#enterprise-panorama" class="nav-link">治理藍圖</a></li>
+              <li><a href="#heritage" class="nav-link">歷史記事</a></li>
+              <li><a href="#partnership" class="nav-link">合作資源</a></li>
+            </ul>
+          </nav>
 
-        <div class="header-actions-block">
-          <a href="#" class="btn-search-icon">🔍</a>
-          <a href="#" class="btn-lang-toggle">English</a>
-
-          <div class="red-action-module">
-            <a href="#" class="red-module-link search">
-              <span class="icon">🔍</span>
-              <span class="text">搜尋</span>
-            </a>
-            <a href="#" class="red-module-link recruit">
-              <span class="icon">🧑‍💼</span>
-              <span class="text">招募</span>
-            </a>
-            <a href="#" class="red-module-link store">
-              <span class="icon">🛍️</span>
-              <span class="text">線上商店</span>
-            </a>
+          <div class="header-actions-block">
+            <a href="#investor" class="btn-outline">IR Login</a>
+            <div class="red-action-module">
+              <a href="#" class="red-module-link search">
+                <span class="icon">🔍</span>
+                <span class="text">搜尋</span>
+              </a>
+              <a href="#" class="red-module-link recruit">
+                <span class="icon">🧑‍💼</span>
+                <span class="text">招募</span>
+              </a>
+              <a href="#" class="red-module-link store">
+                <span class="icon">🛍️</span>
+                <span class="text">線上商店</span>
+              </a>
+            </div>
+            <button class="menu-tier-toggle" aria-expanded="false" aria-controls="global-mega">
+              全站導覽
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="mega-panel" id="global-mega">
+        <div class="container mega-grid">
+          <div class="mega-column">
+            <p class="eyebrow">企業情報</p>
+            <h4>VeiWang Corporate</h4>
+            <ul>
+              <li><a href="#company-info">品牌故事</a></li>
+              <li><a href="#sustainability">永續藍圖</a></li>
+              <li><a href="#heritage">沿革年表</a></li>
+            </ul>
+          </div>
+          <div class="mega-column">
+            <p class="eyebrow">Group Matrix</p>
+            <h4>事業群 &amp; 產品</h4>
+            <ul>
+              <li><a href="#products">食品製造</a></li>
+              <li><a href="#products">餐飲零售</a></li>
+              <li><a href="#enterprise-panorama">生技健康</a></li>
+            </ul>
+          </div>
+          <div class="mega-column">
+            <p class="eyebrow">Connect</p>
+            <h4>投資・合作</h4>
+            <ul>
+              <li><a href="#investor">IR Center</a></li>
+              <li><a href="#partnership">產學共創計畫</a></li>
+              <li><a href="#partnership">獎學金與分潤方案</a></li>
+            </ul>
           </div>
         </div>
       </div>
@@ -76,38 +124,50 @@
           <div class="container hero-text">
             <div class="hero-content-grid">
               <div class="hero-narrative">
-                <span class="hero-badge">TWSE:1203 · Premium Food Group</span>
-                <p class="hero-tagline">美味的傳承，創新的味蕾。</p>
-                <h2 class="hero-title">「誠、勤、樸、慎」—— 味王伴您半世紀。</h2>
+                <span class="hero-badge">TWSE:1203 · Future Bank Inspired</span>
+                <p class="hero-tagline">以金融級視覺定義食品新控股。</p>
+                <h2 class="hero-title">味王集團｜國際食品與生活風格平台</h2>
                 <p class="hero-subtitle">
-                  以王品集團、味全及全球領先食品集團為標竿，導入 Future Bank 式的數據化設計語彙，
-                  建構如銀行控股集團般的品牌信任體驗。
+                  將王品集團的服務矩陣、Next Bank 的留白設計與全球食品龍頭的治理節奏整合成
+                  一個沉穩、富有空氣感的首頁體驗，展演味王的未來版圖。
                 </p>
                 <div class="hero-chip-row">
-                  <span class="hero-chip">王品級服務 SOP</span>
-                  <span class="hero-chip">國際食品龍頭供應鏈</span>
-                  <span class="hero-chip">Future Bank 視覺 DNA</span>
+                  <span class="hero-chip">Central Cloud Kitchen</span>
+                  <span class="hero-chip">Hybrid Retail</span>
+                  <span class="hero-chip">Bio Nutrition Lab</span>
                 </div>
                 <div class="hero-cta-group">
-                  <a href="#products" class="btn-primary">味王集團陣列</a>
-                  <a href="#investor" class="btn-secondary">投資人報告</a>
+                  <a href="#products" class="btn-primary">集團矩陣總覽</a>
+                  <a href="#investor" class="btn-secondary">IR Portal</a>
                 </div>
                 <div class="hero-chip-row badge-row">
-                  <span class="hero-chip badge">ESG AA 評級</span>
-                  <span class="hero-chip badge">零售 / 餐飲 / 生技三軸</span>
-                  <span class="hero-chip badge">國際 8 大據點</span>
+                  <span class="hero-chip badge">ESG AA</span>
+                  <span class="hero-chip badge">18 Global Hubs</span>
+                  <span class="hero-chip badge">會員雲 2.4M+</span>
+                </div>
+              </div>
+              <div class="hero-visual-display">
+                <div class="visual-frame">
+                  <span class="frame-chip">Brand Command Gallery</span>
+                  <div class="visual-placeholder">
+                    <div class="pulse-dot"></div>
+                    <p>未來將置入高解析 hero 圖，保留金融級留白。</p>
+                  </div>
+                  <p class="frame-caption">
+                    中央展示框採 Next Bank 圓角與玻璃邊框比例，預留 16:9 影像或影片。
+                  </p>
                 </div>
               </div>
               <div class="hero-kpi-board">
                 <div class="hero-meta-card premium">
                   <span class="label">創立年份</span>
                   <strong class="value">1965</strong>
-                  <span class="note">50+ 年品牌資產</span>
+                  <span class="note">半世紀品牌資產</span>
                 </div>
                 <div class="hero-meta-card">
                   <span class="label">集團事業體</span>
                   <strong class="value">12</strong>
-                  <span class="note">參考王品矩陣配置</span>
+                  <span class="note">多品牌協同</span>
                 </div>
                 <div class="hero-meta-card">
                   <span class="label">全球據點</span>
@@ -116,13 +176,13 @@
                 </div>
                 <div class="hero-meta-card">
                   <span class="label">年度營收</span>
-                  <strong class="value">NT$ 120+ 億</strong>
-                  <span class="note">以王品級別 KPI 管理</span>
+                  <strong class="value">NT$120B+</strong>
+                  <span class="note">金融級 KPI</span>
                 </div>
                 <div class="hero-meta-card">
                   <span class="label">會員體系</span>
                   <strong class="value">2.4M</strong>
-                  <span class="note">Future Bank 式積點雲</span>
+                  <span class="note">Future Bank 雲</span>
                 </div>
               </div>
             </div>
@@ -142,8 +202,8 @@
             <p class="eyebrow">VeiWang Group Matrix</p>
             <h3>味王集團｜板塊布局優先呈現</h3>
             <p>
-              將味王集團的國內事業、海外據點與核心能力往上提升為首頁主視覺延伸，
-              以王品集團的分群邏輯與 Future Bank 的資訊模塊，快速傳遞企業規模。
+              味王集團將國內製造、生技、零售與海外據點並列呈現，延續王品控股的分群邏輯，
+              以 Next Bank 級距的資訊模塊建立兼具厚度與留白的視覺節奏。
             </p>
           </div>
 
@@ -151,8 +211,8 @@
             <article class="group-master-card">
               <h4>集團指揮中心</h4>
               <p>
-                參考王品控股的治理架構，味王集團以「食品製造 × 餐飲零售 × 生技健康」
-                三大事業群協同推進，所有品牌共用 Future Bank 樣式的會員金融雲與數據儀表。
+                以「食品製造 × 餐飲零售 × 生技健康」三大事業群協同推進，品牌共享會員金融雲、
+                數據儀表與中控廚房，實現一眼可讀的指揮中心。
               </p>
               <ul>
                 <li>控股層：策略與品牌控盤，對齊國內外頂尖食品集團 KPI。</li>
@@ -185,7 +245,7 @@
                       <br />策略品牌</p>
                   </a>
                 </div>
-                <p class="cluster-note">對標王品集團多品牌策略，持續擴增新餐飲與零售子公司。</p>
+                <p class="cluster-note">以多品牌策略加速新品上市，形成如王品集團般的餐飲零售矩陣。</p>
               </div>
 
               <div class="cluster-block overseas">
@@ -199,7 +259,7 @@
                   <a href="#" class="region-card"><span class="region-name">亞洲・東南亞</span></a>
                   <a href="#" class="region-card"><span class="region-name">歐洲・其他</span></a>
                 </div>
-                <p class="cluster-note">依據全球頂尖食品龍頭的供應鏈網路配置，逐年拓展據點。</p>
+                <p class="cluster-note">依據國際食品龍頭供應鏈路網，逐年拓展全球據點。</p>
               </div>
             </div>
           </div>
@@ -235,10 +295,10 @@
             <article class="benchmark-panel">
               <h4>集團治理重點</h4>
               <ul>
-                <li>企業總部 － 以王品集團級別的 SOP 與服務藍圖為管理底盤。</li>
+                <li>企業總部 － 落實王品級 SOP 與 Next Bank 線條語彙。</li>
                 <li>品牌矩陣 － 主力食品、健康生技、外食零售三大事業群平衡投資。</li>
-                <li>供應鏈 － 以國際食品龍頭的冷鏈與 ESG 規範為參考，導入即時監控。</li>
-                <li>體驗升級 － 將銀行級會員與點數體系跨界導入餐飲零售全通路。</li>
+                <li>供應鏈 － 導入國際食品龍頭等級的冷鏈、ESG 與數位監控。</li>
+                <li>體驗升級 － 以銀行級會員與點數體系串聯全通路。</li>
               </ul>
               <div class="quote-block">
                 <p>
@@ -295,45 +355,59 @@
         </div>
       </section>
 
-      <section class="news-events-section container">
-        <h3>NEWS & ANNOUNCEMENT</h3>
-        <div class="news-grid">
-          <article class="news-item">
-            <span class="news-date">2025.11.17</span>
-            <a href="#">年度財報：營收創近十年新高，感謝股東支持。</a>
-          </article>
-          <article class="news-item">
-            <span class="news-date">2025.10.28</span>
-            <a href="#">味王X大甲媽聯名產品系列，好評熱銷中！</a>
-          </article>
-          <article class="news-item">
-            <span class="news-date">2025.09.01</span>
-            <a href="#">企業社會責任報告書（CSR）正式公開。</a>
-          </article>
+      <section class="heritage-section" id="heritage">
+        <div class="container">
+          <div class="section-header align-left">
+            <p class="eyebrow">Heritage &amp; Chronicle</p>
+            <h3>歷史記事・沿革視覺軸線</h3>
+            <p>
+              以風格化時間軸呈現味王從創立、上市、國際佈局到未來實驗室的關鍵片段，
+              結合插畫元素打造更具故事性的資訊區塊。
+            </p>
+          </div>
+          <div class="heritage-timeline">
+            <article class="heritage-card" data-year="1965">
+              <div class="heritage-icon">🍜</div>
+              <h4>創立於台北</h4>
+              <p>以經典調味粉開啟味王品牌，奠定台式風味的黃金比例。</p>
+            </article>
+            <article class="heritage-card" data-year="1995">
+              <div class="heritage-icon">📈</div>
+              <h4>股票上市</h4>
+              <p>正式登錄台灣證交所，導入國際治理規範與資訊揭露制度。</p>
+            </article>
+            <article class="heritage-card" data-year="2012">
+              <div class="heritage-icon">🌏</div>
+              <h4>海外據點佈局</h4>
+              <p>在美洲與東南亞成立複合工廠，打造跨時區供應鏈。</p>
+            </article>
+            <article class="heritage-card" data-year="2025">
+              <div class="heritage-icon">🧪</div>
+              <h4>Future Flavor Lab</h4>
+              <p>啟動味王 Future Bank 版的食品創新實驗室，跨界金融科技。</p>
+            </article>
+          </div>
         </div>
-        <a href="#" class="view-all-button">查看所有新聞公告 »</a>
       </section>
 
       <section class="value-section">
-        <div class="container">
+        <div class="container value-orbit">
           <h3>Our Core Value</h3>
-          <div class="value-cards-grid">
-            <div class="card">
-              <div class="icon">🍲</div>
-              <h4>堅持美味</h4>
-              <p>嚴選在地食材，保留最純粹、最道地的台灣味。</p>
+          <div class="value-orbs">
+            <div class="value-orb flavor">
+              <h4>Flavor Craft</h4>
+              <p>以職人手感結合中央廚房，守護經典台味。</p>
             </div>
-            <div class="card">
-              <div class="icon">♻️</div>
-              <h4>永續發展</h4>
-              <p>推動綠色工廠，致力於環境保護與資源永續利用。</p>
+            <div class="value-orb planet">
+              <h4>Planet Positive</h4>
+              <p>永續製程、低碳包裝，向國際 ESG 夥伴看齊。</p>
             </div>
-            <div class="card">
-              <div class="icon">🤝</div>
-              <h4>社會責任</h4>
-              <p>透過食品教育與公益活動，回饋鄉里，服務社會。</p>
+            <div class="value-orb people">
+              <h4>People First</h4>
+              <p>以金融級會員體驗與教育資源連結社群。</p>
             </div>
           </div>
+          <p class="value-caption">三個交疊圓環象徵味王的味覺、地球、人才共生哲學。</p>
         </div>
       </section>
 
@@ -412,33 +486,36 @@
       <a href="#" class="side-nav-item online-store">線上商店</a>
     </div>
 
-      <section class="deployment-status" id="deployment-status">
-        <div class="container deployment-grid">
-          <div>
-            <p class="eyebrow">Deployment Status</p>
-            <h3>GitHub Pages 版本同步提示</h3>
+      <section class="partnership-hub" id="partnership">
+        <div class="container partnership-grid">
+          <div class="partnership-intro">
+            <p class="eyebrow">Co-Creation Hub</p>
+            <h3>產學合作・分潤連結・永續人才</h3>
             <p>
-              若您已將最新檔案推送至 GitHub 仍看到舊版畫面，通常是瀏覽器或 CDN 快取仍保留舊的
-              CSS/JS。此區塊會顯示目前頁面載入的版本時間，協助辨識是否為最新部署。
+              味王以金融業級距的開放平台，與大專院校、廚藝學校、創投與通路夥伴共創。此區塊揭示
+              最新合作題目、獎學金與分潤模式，讓業界即時掌握可串聯的資源。
             </p>
-            <div class="deploy-meta">
+            <div class="partnership-meta">
               <span class="build-tag" id="build-tag">版本偵測中…</span>
-              <span class="cache-hint">建議：Ctrl + Shift + R 強制重整</span>
+              <span class="meta-chip">Next Intake：2026 Q1</span>
             </div>
           </div>
-          <div>
-            <h4>排除舊版快取的快速檢查</h4>
-            <ol class="deploy-steps">
-              <li>強制重新整理瀏覽器（Windows：Ctrl+Shift+R / Mac：Cmd+Shift+R）。</li>
-              <li>確認 GitHub Pages 指向的分支（通常為 <code>main</code> 或 <code>gh-pages</code>）。</li>
-              <li>等待數分鐘讓 CDN 更新，或在網址後加入 <code>?v=日期</code> 以強制載入。</li>
-            </ol>
-            <div class="deploy-actions">
-              <a href="https://docs.github.com/en/pages" target="_blank" class="btn-outline"
-                >GitHub Pages 指南</a
-              >
-              <a href="#" class="btn-primary">回到頁面頂部</a>
-            </div>
+          <div class="partnership-cards">
+            <article class="partnership-card">
+              <h4>產學共創題庫</h4>
+              <p>提供食品科技、永續包材、智慧會員系統三大模組，開放校方提案。</p>
+              <a href="#" class="text-link">提交提案 →</a>
+            </article>
+            <article class="partnership-card">
+              <h4>分潤與品牌授權</h4>
+              <p>導入營收分潤 API，協助通路夥伴與味王共同銷售聯名商品。</p>
+              <a href="#" class="text-link">取得 API Key →</a>
+            </article>
+            <article class="partnership-card">
+              <h4>獎學金與人才培育</h4>
+              <p>針對廚藝、營運、資料科學設立年度獎學金與實習名額。</p>
+              <a href="#" class="text-link">報名徵選 →</a>
+            </article>
           </div>
         </div>
       </section>

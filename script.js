@@ -45,4 +45,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     buildTag.textContent = `最後更新：${formatter.format(lastUpdated)}`;
   }
+
+  const tierToggle = document.querySelector(".menu-tier-toggle");
+  const megaPanel = document.getElementById("global-mega");
+  if (tierToggle && megaPanel) {
+    tierToggle.addEventListener("click", () => {
+      const isOpen = megaPanel.classList.toggle("open");
+      tierToggle.setAttribute("aria-expanded", isOpen);
+    });
+  }
 });
