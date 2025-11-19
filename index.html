@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Cache-Control" content="no-store" />
     <title>味王股份有限公司 - 企業資訊 | 傳承半世紀的經典美味</title>
-    <link rel="stylesheet" href="./css/Style.css" />
+    <link rel="stylesheet" href="./css/Style.css?v=20241119" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Noto+Sans+TC:wght@400;700&display=swap"
       rel="stylesheet"
@@ -400,6 +401,7 @@
           </a>
         </div>
       </section>
+    </main>
 
     <div class="side-nav">
       <a href="#company-info" class="side-nav-item">企業情報</a>
@@ -409,6 +411,37 @@
       <a href="#careers" class="side-nav-item">招募資訊</a>
       <a href="#" class="side-nav-item online-store">線上商店</a>
     </div>
+
+      <section class="deployment-status" id="deployment-status">
+        <div class="container deployment-grid">
+          <div>
+            <p class="eyebrow">Deployment Status</p>
+            <h3>GitHub Pages 版本同步提示</h3>
+            <p>
+              若您已將最新檔案推送至 GitHub 仍看到舊版畫面，通常是瀏覽器或 CDN 快取仍保留舊的
+              CSS/JS。此區塊會顯示目前頁面載入的版本時間，協助辨識是否為最新部署。
+            </p>
+            <div class="deploy-meta">
+              <span class="build-tag" id="build-tag">版本偵測中…</span>
+              <span class="cache-hint">建議：Ctrl + Shift + R 強制重整</span>
+            </div>
+          </div>
+          <div>
+            <h4>排除舊版快取的快速檢查</h4>
+            <ol class="deploy-steps">
+              <li>強制重新整理瀏覽器（Windows：Ctrl+Shift+R / Mac：Cmd+Shift+R）。</li>
+              <li>確認 GitHub Pages 指向的分支（通常為 <code>main</code> 或 <code>gh-pages</code>）。</li>
+              <li>等待數分鐘讓 CDN 更新，或在網址後加入 <code>?v=日期</code> 以強制載入。</li>
+            </ol>
+            <div class="deploy-actions">
+              <a href="https://docs.github.com/en/pages" target="_blank" class="btn-outline"
+                >GitHub Pages 指南</a
+              >
+              <a href="#" class="btn-primary">回到頁面頂部</a>
+            </div>
+          </div>
+        </div>
+      </section>
 
     <footer>
       <div class="footer-top">
@@ -432,6 +465,6 @@
         </div>
       </div>
     </footer>
-    <script src="./script.js"></script>
+    <script src="./script.js?v=20241119"></script>
   </body>
 </html>

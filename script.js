@@ -32,4 +32,17 @@ document.addEventListener("DOMContentLoaded", () => {
   //     let nextIndex = (currentIndex + 1) % items.length;
   //     updateCarousel(nextIndex);
   // }, 5000); // 每 5 秒切換
+
+  const buildTag = document.getElementById("build-tag");
+  if (buildTag) {
+    const lastUpdated = new Date(document.lastModified);
+    const formatter = new Intl.DateTimeFormat("zh-TW", {
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+      hour: "2-digit",
+      minute: "2-digit",
+    });
+    buildTag.textContent = `最後更新：${formatter.format(lastUpdated)}`;
+  }
 });
